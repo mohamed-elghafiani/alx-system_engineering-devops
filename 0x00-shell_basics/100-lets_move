@@ -1,2 +1,2 @@
 #!/bin/bash
-mv `find -name "[A-Z]*" -type f | tr "\n" " "` /tmp/u
+find -name "[A-Z]*" -type f | xargs mv -t /tmp/
