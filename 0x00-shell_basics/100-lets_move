@@ -1,2 +1,2 @@
 #!/bin/bash
-mv `find -name "[A-Z]*" -type f | tr "\n" " "` /tmp/u
+mv 'find -name "[A-Z]*" -type f | tr "\n" " "' /tmp/u
