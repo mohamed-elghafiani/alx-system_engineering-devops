@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-find -name "[A-Z]*" -type f | xargs mv -t /tmp/
-=======
-mv 'find -name "[A-Z]*" -type f | tr "\n" " "' /tmp/u
->>>>>>> d2c9fd33cda466921072d5b61ac16b3bd9691b1d
+find -name "[A-Z]*" -type f | xargs mv -t /tmp/u/
