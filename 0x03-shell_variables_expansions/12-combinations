@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | sed 's/oo //g' | awk -v RS=" " 1 | sed '/^$/d' | sort
+echo {a..z}{a..z} | awk '{gsub("oo ",""); print}' | awk -v RS=" " 1 | head -n -1 | sort
