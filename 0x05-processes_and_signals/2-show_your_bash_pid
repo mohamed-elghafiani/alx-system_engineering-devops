@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Get the PID of the current bash shell
+current_pid=$$
+
+# Use pstree to display the process hierarchy and filter lines containing "bash"
+# Then use awk to print the process hierarchy in the desired format
+pstree -p | grep "bash" | awk -v pid="$current_pid" '$0 ~ pid {print}'
+
