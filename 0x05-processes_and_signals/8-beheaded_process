@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# 8-beheaded_process.sh
+# This script is used to kill the 7-highlander process.
+
+# Find and kill the 7-highlander process
+pid=$(pgrep -f "7-highlander.sh")
+
+if [ -z "$pid" ]; then
+    echo "No 7-highlander process found."
+else
+    kill "$pid"
+    echo "Killed"
+fi
+
