@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# 7-highlander.sh
+# This script displays "To infinity and beyond" indefinitely with a 2-second pause between each iteration.
+# It also responds to a SIGTERM signal by printing "I am invincible!!!" and gracefully exiting.
+
+# Function to handle the SIGTERM signal
+terminate() {
+    echo "I am invincible!!!"
+    exit 0
+}
+
+# Register the terminate function to handle SIGTERM
+trap terminate SIGTERM
+
+# Main loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
+
