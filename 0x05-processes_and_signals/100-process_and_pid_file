@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# 100-process_and_pid_file.sh
+# This script creates a PID file, runs indefinitely, and responds to signals.
+
+# Function to clean up and exit
+cleanup() {
+    echo "Cleaning up and exiting..."
+    rm -f /var/run/myscript.pid
+    exit 0
+}
+
+# Function to handle SIGTERM signal
+sigterm_handler() {
+    echo "I hate the kill command"
+    cleanup
+}
+
+# Function to handle SIGINT signal
+sigint_handler() {
+    echo "Y U no love me?!"
+}
+
+# Function to handle SIGQUIT signal
+sigquit_handler() {
+    echo "Received SIGQUIT"
+    cleanup
+}
+
+# Create a PID file with the script's PID
+echo "$$" > /var/run/myscript.pid
+
+# Register signal handlers
+trap 'sigterm_handler' SIGTERM
+trap 'sigint_handler' SIGINT
+trap 'sigquit_handler' SIGQUIT
+
+# Display the message indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
+
