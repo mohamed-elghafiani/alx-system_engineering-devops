@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # list all processes
 
-ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
+ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
