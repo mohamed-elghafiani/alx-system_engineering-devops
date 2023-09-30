@@ -1,6 +1,6 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Get the PID of the current bash shell
+
 current_pid=$$
 
 # Use pstree to display the process hierarchy and filter lines containing "bash"
