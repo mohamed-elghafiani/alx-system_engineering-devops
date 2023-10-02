@@ -3,5 +3,7 @@
 
 for item in *;
 do
+if [ -f "$item" ] && [ "$item" != ".*" ]; then
 echo "${item:2}"
+fi
 done
