@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# for ls
+
+for item in *;
+do
+echo "${item:2}"
+done
