@@ -4,6 +4,7 @@
 for item in *;
 do
 if [ -f "$item" ] && [ "$item" != ".*" ]; then
-echo "${item:2}"
+	name=$(echo "$item" | cut -d'-' -f2-)
+	echo "${name}"
 fi
 done
