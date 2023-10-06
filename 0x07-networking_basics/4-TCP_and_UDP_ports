@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# a scripts that displays listening ports
+
+netstat -tulp
