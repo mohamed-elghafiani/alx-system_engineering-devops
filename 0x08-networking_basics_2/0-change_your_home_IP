@@ -2,7 +2,7 @@
 # change your home IP
 
 cp /etc/hosts hosts.new
-sed -i s/"127.0.0.1	localhost"/"127.0.0.2	localhost"/ hosts.new
+sed -i s/"127.0.0.1	localhost"/"127.0.0.2 localhost"/ hosts.new
 var="$(grep 'facebook.com' hosts.new)"
 if [ ! -z "$var" ]
 then
