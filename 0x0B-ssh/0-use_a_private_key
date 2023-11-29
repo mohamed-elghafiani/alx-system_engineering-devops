@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Connecting to a server using a private key
+
+ssh -o "IdentitiesOnly=yes" -i ~/.ssh/school ubuntu@34.232.68.189
