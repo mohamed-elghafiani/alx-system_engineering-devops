@@ -1,5 +1,5 @@
 # Execute a command
 
 exec { 'killmenow':
-  command => 'pkill killmenow'
+  command => '/bin/pkill killmenow'
 }
