@@ -6,6 +6,10 @@ if [ $# -lt 3 ]; then
 	exit 0
 fi
 
-args=("$@")
+if [ $# -ge 4 ]; then
+	args=("$@")
 
-scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ${args[0]} ${args[2]}@${args[1]}:~${args[3]}
+	scp -o StrictHostKeyChecking=no -i ${args[3]} ${args[0]} ${args[2]}@${args[1]}:~/
+else
+	scp -o StrictHostKeyChecking=no ${args[3]} ${args[0]}@${args[1]}:~/
+fi;
