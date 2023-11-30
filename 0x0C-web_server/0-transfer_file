@@ -8,4 +8,4 @@ fi
 
 args=("$@")
 
-scp ${args[0]} ${args[2]}@${args[1]}:${args[3]}
+scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ${args[0]} ${args[2]}@${args[1]}:~${args[3]}
