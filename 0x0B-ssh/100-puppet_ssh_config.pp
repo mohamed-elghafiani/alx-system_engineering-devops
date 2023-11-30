@@ -16,7 +16,7 @@ class ssh_config {
   augeas { 'declare_identity_file':
     context => '/files/etc/ssh/ssh_config',
     changes => [
-      'set Host/*[. = "*"]/IdentityFile /home/user/.ssh/school',
+      'set Host/*[. = "*"]/IdentityFile ~/.ssh/school',
     ],
     notify  => Service['ssh'],
   }
