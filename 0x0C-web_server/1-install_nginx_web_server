@@ -17,7 +17,12 @@ events {
 }" > /etc/nginx/nginx.conf
 mkdir -p /var/www/mysite
 echo 'Hello World!' > /var/www/mysite/index.html
-sudo ufw allow 'Nginx HTTP'
+service nginx start
+    if [ $? -ne 0 ]
+    then
+	"Problem starting nginx"
+	exit 1
+    fi
 else
     echo "Couldn't install nginx"
     exit 1
