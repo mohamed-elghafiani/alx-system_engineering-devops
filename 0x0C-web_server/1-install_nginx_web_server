@@ -2,5 +2,4 @@
 # install nginx web server
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo echo 'Hello World!' > index.html
-sudo mv index.html /var/www/html/index.nginx-debian.html
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
