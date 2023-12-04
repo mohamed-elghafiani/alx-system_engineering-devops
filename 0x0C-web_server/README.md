@@ -13,6 +13,7 @@
 * [HTTP redirection](https://moz.com/learn/seo/redirection)
 * [Not found HTTP response code](https://en.wikipedia.org/wiki/HTTP_404)
 * [Logs files on Linux](https://www.cyberciti.biz/faq/ubuntu-linux-gnome-system-log-viewer/)
+* [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY)
 
 # For reference:
 
