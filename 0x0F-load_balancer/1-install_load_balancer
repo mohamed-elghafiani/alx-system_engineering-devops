@@ -31,13 +31,13 @@ defaults
   timeout http-request 10s
 
 frontend myfrontend
-  bind 127.0.0.1:80
+  bind 0.0.0.0:80
   default_backend myservers
 
 backend myservers
   server 226710-web-01 100.24.237.78:80
-  server 226710-web-01 3.94.211.44:80
+  server 226710-web-02 3.94.211.44:80
 " | sudo tee /etc/haproxy/haproxy.cfg
 
 # Start haproxy
-sudo service haproxy restart
+sudo service haproxy start
