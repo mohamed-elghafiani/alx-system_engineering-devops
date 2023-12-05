@@ -25,6 +25,9 @@ echo -e \
 "
 defaults
   mode http
+  balance roundrobin
+  option httpclose
+  option forwardfor
   timeout client 10s
   timeout connect 5s
   timeout server 10s 
@@ -35,8 +38,8 @@ frontend myfrontend
   default_backend myservers
 
 backend myservers
-  server 226710-web-01 100.24.237.78:80
-  server 226710-web-02 3.94.211.44:80
+  server 226710-web-01 100.24.237.78:80 check
+  server 226710-web-02 3.94.211.44:80 check
 " | sudo tee /etc/haproxy/haproxy.cfg
 
 # Start haproxy
