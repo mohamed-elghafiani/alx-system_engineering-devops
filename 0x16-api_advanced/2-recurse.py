@@ -8,7 +8,7 @@ def recurse(subreddit, hot_list=[], after=None):
     if subreddit is None:
         return None
 
-    h = {'User-Agent': 'MyRedditApp/1.0 (by /u/YourRedditUsername)'}
+    h = {'User-Agent': 'MYAPP/1.0 (by /u/elghafiani)'}
 
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {'limit': 100, 'after': after} if after else {'limit': 100}
