@@ -8,17 +8,17 @@ def recurse(subreddit, hot_list=[], after=None):
     if subreddit is None:
         return None
 
-    headers = {'User-Agent': 'MyRedditApp/1.0 (by /u/YourRedditUsername)'}
+    h = {'User-Agent': 'MyRedditApp/1.0 (by /u/YourRedditUsername)'}
 
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {'limit': 100, 'after': after} if after else {'limit': 100}
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    res = requests.get(url, headers=h, params=params, allow_redirects=False)
 
-    if response.status_code != 200:
+    if res.status_code != 200:
         return None
 
     try:
-        data = response.json()
+        data = res.json()
         children = data.get('data', {}).get('children', [])
 
         titles = [child['data']['title'] for child in children]
