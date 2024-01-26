@@ -1,6 +1,6 @@
 # Web Stack Debugging Outage - Postmortem
 
-![Oops](https://i.imgflip.com/1ts9yk.jpg)
+![I think we're passed the point where rebooting can help](https://th.bing.com/th/id/R.4928173b6f158bacc110de846fab76db?rik=2OZFOJM%2fJVxtvA&pid=ImgRaw&r=0)
 
 **Incident Overview**
 
