@@ -1,6 +1,6 @@
 # Web Stack Debugging Outage - Postmortem
 
-![Oops](https://i.imgur.com/abc123.png)
+![Oops](https://i.imgflip.com/1ts9yk.jpg)
 
 **Incident Overview**
 
